@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+
+
+body{
+    background-color: #f8f8ef   ;
+    color:#14272f;
+    font-family: Inter;
+}
+.continaer{
+    display: grid;
+    grid-template-areas: 
+    
+    "head head head"
+    "main main main"
+    "aboutme aboutme aboutme"
+    "services services services"
+    "myachivements myachivements myachivements"
+    "myblog myblog myblog"
+    "contact contact contact"
+    "footer footer footer";
+    gap:20px;
+}
+/* .............. head .............*/
+.head{
+    grid-area: head;
+    margin: 30px 10%;
+display: flex;
+flex-direction: row;
+gap:30px;
+}
+a{
+    text-decoration: none;
+    color: #14272f;
+
+}
+
+
+.head nav{
+    margin-left:20%;
+}
+.head nav ul{
+    list-style-type: none;
+    display: flex;
+flex-direction: row;
+gap:30px;
+
+}
+nav ul li a {
+    position: relative;
+}
+ nav ul li a::after{
+content: '';
+height: 3px;
+position: absolute;
+bottom: -6px;
+left: 0;
+width: 0%;
+background-color:#14272f;
+
+}
+ nav ul li a:hover::after{
+    width: 100%;
+}
+.head img{
+    width: 30%;
+    border-radius: 40%;
+}
+
+/* .............. main .............*/
+.main{
+    grid-area: main;
+
+    margin: 10% 40%;
+}
+
+.main span{
+    
+    font-size: larger;
+}
+
+/* .............. about .............*/
+.aboutme{
+    grid-area: aboutme;
+ 
+    margin: 20% 5%;
+}
+
+.aboutMEE{
+    display: flex;
+    flex-direction: row;
+    gap:0px;
+    padding-left: 20%;
+}
+.text_heading{
+text-align: center;
+}
+
+.colabout2 p{
+    margin-top: 10%;
+    text-align: right;
+}
+.colabout1 img{
+width: 30%;
+}
+
+/* .............. services .............*/
+.services{
+    grid-area: services;
+    margin: 10% 0%;
+  text-align: center;
+}
+
+.myservice{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin: 5% 20%;
+
+}
+.service1{
+    border: 2px solid #14272f;;
+    width: 50%;
+    height: 10vh;
+        border-radius: 5%;
+  
+}
+
+/* .............. myachivements .............*/
+.myachivements{
+    grid-area: myachivements;
+    text-align: center;
+    margin: 10% 5%;
+}
+.achivements{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin: 5% 20%;
+    
+}
+.achivement{
+
+    border: 2px solid #14272f;;
+    height: 10vh;
+    width: 30%;
+    padding-top: 2%;
+    border-radius: 5%;
+}
+
+/* .............. myblog .............*/
+.myblog{
+    grid-area: myblog;
+    text-align: center;
+    margin: 10% 5%;
+}
+
+.myblogs{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin: 5% 20%;
+
+}
+.blog{
+    border: 2px solid #14272f;;
+    width: 30%;
+    height: 10vh;
+    border-radius: 5%;
+    padding-top: 2%;
+}
+.blog a{
+    position: relative;
+}
+.blog a::after{
+    content: '';
+
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -6px;
+    background-color:#14272f;
+    left: 0;
+}
+.blog a:hover::after{
+    width: 100%;
+}
+
+/* .............. contact .............*/
+.contact{
+    margin: 10% 5%;
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.col1contact{
+    flex-basis: 40%;
+    margin-left: 20%;
+
+}
+
+.col1contact p{
+    padding: 5% 5%;
+}
+
+.col2contact{
+    flex-basis: 60%;
+}
+
+.col2contact form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+form input,
+form textarea {
+    background-color:#14272f;
+    width: 50%;
+    margin-top: 10px;
+    border: 1px solid #14272f;
+    border-radius: 10px;
+    padding: 10px;
+
+
+}
+.btn {
+    text-decoration: none;
+    background-color:  #14272f;
+color:#f8f8ef;
+    border-radius: 20px;
+    border: 1px solid  #14272f;
+
+    padding: 20px;
+    width: 50%;
+    cursor: pointer;
+}
+form .btn {
+    margin-top: 10px;
+
+
+}
+
+/* .............. footer .............*/
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    background-color: #14272f;
+  margin-top: 10%;
+
+}
+
+.col1footer {
+
+    flex-basis: 50%;
+    margin-left: 10%;
+}
+
+.col1footer img{
+    width: 30%;
+   
+}
+.col2footer{
+     flex-basis: 50%;
+    margin-left: 40%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+}
+.col2footer i{
+    color: #f8f8ef;
+    font-size:30px;
+
+
+}
+
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width:600px) {
+
+    nav .fas{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20%;
+    }
+.main{
+    /* position: absolute;
+    top: 20%;
+    right: 20%; */
+    margin: 10% 20%;
+
+}
+    .main h2 {
+      width: 500%;
+   
+    }
+ .head nav ul{
+
+        display: flex;
+    flex-direction: column;
+    gap:30px;
+    }
+
+    nav ul {
+
+    position: absolute;
+    left: -77%;
+    height: 60vh;
+    width: 30%;
+
+    opacity: 80%;
+    padding: 10% 5%;
+    
+    
+    }
+
+    .test{
+     
+        left: 77%;
+    }
+
+    .service1{
+        border: 2px solid #14272f;;
+        width: 50%;
+        height: 25vh;
+        border-radius: 5%;
+      
+    }
+    .aboutme{
+        grid-area: aboutme;
+     
+        margin: 20% 10%;
+    }
+    
+    .achivement{
+
+        border: 2px solid #14272f;;
+        height: 10vh;
+        width: 50%;
+      font-size: 8px;
+        border-radius: 5%;
+    }
+    .contact{
+        margin: 10% 5%;
+        grid-area: contact;
+        display: flex;
+        flex-direction: row;
+        gap:30px;
+    }
+    .col1contact{
+        flex-basis: 40%;
+        margin-left: 5%;
+    
+    }
+.icon {
+position: absolute;
+left: 6%;
+}
+    .col2contact form{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    
+    form input,
+    form textarea {
+        background-color:#14272f;
+        width: 80%;
+        margin-top: 10px;
+        border: 1px solid #14272f;
+        border-radius: 10px;
+        padding: 10px;
+    
+    
+    }
+ 
+    .aboutMEE{
+        display: flex;
+        flex-direction: row;
+        gap:0px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .col2contact{
+        flex-basis: 50%;
+    }
+
+    .col1footer img{
+        width: 50%;
+       
+    }
+}
